@@ -17,5 +17,5 @@ function displayCommits() {
 }
 
 function getCommits(el) {
-  
+  const name = 
 }
