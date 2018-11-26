@@ -36,10 +36,10 @@ function displayBranches() {
   const branches = JSON.parse(this.responseText)
   const branchesList = `<ul>${branches.map(branch => '<li>' + branch.name + '</li>' ).join('')}</ul>`
   if (branches) {
-  document.getElementById('details').innerHTML = branchesList
+    document.getElementById('details').innerHTML = branchesList
   }
   else {
-    "There are no branches"
+    document.getElementById('details').innerHTML ="There are no branches"
   }
 }
 
