@@ -16,10 +16,10 @@ function displayCommits() {
   const commits = JSON.parse(this.responseText);
   const commitsList = `<ul>${commits.map(commit => '<li><strong>' + commit.committer.login + '</strong> ('+ commit.commit.author.name + ') - ' + commit.commit.message + '</li>').join('')}</ul>`
   if (commits) {
-  document.getElementById('details').innerHTML = commitsList
+    document.getElementById('details').innerHTML = commitsList
   }
   else {
-    "There are no commits"
+    document.getElementById('details').innerHTML ="There are no commits"
   }
 }
 
