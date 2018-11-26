@@ -14,8 +14,8 @@ function getRepositories() {
 
 function displayCommits() {
   const commits = JSON.parse(this.responseText);
-  const commitsList = `<ul>${commits.map(commit => '<li><strong>' + commit.committer.login + '</strong> ('+ commit.commit.author.name + ') - ' + commit.commit.message + '</li>').join('')}</ul>`
-  if (commits) {
+  if (commits.message !== 'Not Found') {
+    const commitsList = `<ul>${commits.map(commit => '<li><strong>' + commit.committer.login + '</strong> ('+ commit.commit.author.name + ') - ' + commit.commit.message + '</li>').join('')}</ul>`
     document.getElementById('details').innerHTML = commitsList
   }
   else {
@@ -34,7 +34,6 @@ function getCommits(el) {
 
 function displayBranches() {
   const branches = JSON.parse(this.responseText)
-  console.log(branches.message)
   if (branches.message !== 'Not Found') {
     const branchesList = `<ul>${branches.map(branch => '<li>' + branch.name + '</li>' ).join('')}</ul>`
     document.getElementById('details').innerHTML = branchesList
