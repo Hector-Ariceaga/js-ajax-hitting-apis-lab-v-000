@@ -3,10 +3,10 @@ function showRepositories() {
   console.log(repos)
 }
 
-function getRepositories(el) {
+function getRepositories() {
   console.log(el);
   const req = new XMLHttpRequest();
   req.addEventListener('load', showRepositories)
-  req.open('GET', `https://api.github.com/users/${el.value}/repos`);
+  req.open('GET', `https://api.github.com/users/${}/repos`);
   req.send();
 }
