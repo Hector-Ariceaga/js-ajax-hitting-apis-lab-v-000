@@ -5,7 +5,7 @@ function displayRepositories() {
     document.getElementById('repositories').innerHTML = repoList
   }
   else {
-    
+    document.getElementById('repositories').innerHTML = "No matching repositories"
   }
 }
 
