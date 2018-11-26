@@ -13,7 +13,7 @@ function getRepositories() {
 }
 
 function displayCommits() {
-  var commits = JSON.parse(this.responseText);
+  const commits = JSON.parse(this.responseText);
   console.log(commits)
   // const commitsList = `<ul>${commits.map(commit => '<li><strong>' + )
 }
