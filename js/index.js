@@ -36,7 +36,12 @@ function displayBranches() {
   const branches = JSON.parse(this.responseText)
   console.log(branches)
   const branchesList = `<ul>${branches.map(branch => '<li>' + branch.name + '</li>' ).join('')}</ul>`
+  if (branchesList) {
   document.getElementById('details').innerHTML = branchesList
+  }
+  else {
+    "There are no branches"
+  }
 }
 
 function getBranches(el) {
