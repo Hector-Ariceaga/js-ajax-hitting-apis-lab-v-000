@@ -29,7 +29,8 @@ function getCommits(el) {
 
 function displayBranches() {
   const branches = JSON.parse(this.responseText)
-  const branchesList = `<ul>${branches.map(branch => '<li>' +}`
+  console.log(branches)
+  const branchesList = `<ul>${branches.map(branch => '<li>' ).join('')}</ul>`
 }
 
 function getBranches(el) {
