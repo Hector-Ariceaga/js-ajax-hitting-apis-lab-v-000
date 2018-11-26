@@ -1,6 +1,6 @@
 function displayRepositories() {
   var repos = JSON.parse(this.responseText);
-  const repoList = `<ul>${repos.map(repo => '<li>' + repo.name + '<a href="#" onClick(this)>' +  '</li>').join('')}</ul>`
+  const repoList = `<ul>${repos.map(repo => '<li>' + repo.name + '<a href="#" data-repo="' +  '</li>').join('')}</ul>`
   document.getElementById('repositories').innerHTML = repoList
 }
 
