@@ -35,7 +35,7 @@ function getCommits(el) {
 function displayBranches() {
   const branches = JSON.parse(this.responseText)
   console.log(branches)
-  if (branches.message === "not found") {
+  if (branches.message === "Not Found") {
   const branchesList = `<ul>${branches.map(branch => '<li>' + branch.name + '</li>' ).join('')}</ul>`
   }
   
