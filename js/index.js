@@ -16,6 +16,6 @@ function displayCommits() {
   
 }
 
-function getCommits() {
+function getCommits(el) {
   
 }
