@@ -17,5 +17,6 @@ function displayCommits() {
 }
 
 function getCommits(el) {
-  const name = 
+  const name = el.dataset.name
+  
 }
