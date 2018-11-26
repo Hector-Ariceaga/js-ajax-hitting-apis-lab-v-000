@@ -1,5 +1,6 @@
 function displayRepositories() {
   var repos = JSON.parse(this.responseText);
+  console.log(repos)
   if (repos.message !== "Not Found") {
     const repoList = `<ul>${repos.map(repo => '<li>' + repo.name + ' - <a href="#" data-repository="' + repo.name + '" data-username="' + repo.owner.login + '" onclick="getCommits(this)">Get Commits</a> - <a href="#" data-repository ="' + repo.name + '" data-username="' + repo.name + '" onclick="getBranches(this)">Get Branches</a> - <a href="' + repo.html_url + '">Repo URL</a></li>').join('')}</ul>`
     document.getElementById('repositories').innerHTML = repoList
