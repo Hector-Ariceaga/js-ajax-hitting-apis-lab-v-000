@@ -1,7 +1,7 @@
 function displayRepositories() {
   var repos = JSON.parse(this.responseText);
   console.log(repos)
-  const repoList = 
+  const repoList = `<ul>
 }
 
 function getRepositories() {
